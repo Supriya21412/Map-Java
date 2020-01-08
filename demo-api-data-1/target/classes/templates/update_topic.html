@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Topic</title>
+</head>
+<body>
+	<div>
+	<h1>Update Topic</h1>
+	<br/>
+	<form action="#" th:action="@{/save}" th:object="${topic}" method="post">
+	
+	<table>
+		<tr>
+			<td>Topic id</td>
+			<td><input type="text" th:value="${topic.id}" name="id" readonly="readonly"></td>
+			
+		
+			<td>Topic name</td>
+			<td contenteditable="true"><input type="text" th:value="${topic.name}" name="name"></td>
+			
+			
+			<td >Topic description</td>
+			<td contenteditable="true"><input type="text" th:value="${topic.description}" name="description"></td>
+			
+			
+			<td ><button type="submit" >Save</button></td>
+			
+		</tr>
+	
+	</table>	
+	
+	</form>
+	
+	
+	
+	</div>
+</body>
+</html>

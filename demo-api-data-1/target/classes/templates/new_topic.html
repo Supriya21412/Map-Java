@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Topic</title>
+</head>
+<body>
+	<div>
+	<h1>Add Topic</h1>
+	<br/>
+	<form action="#" th:action="@{/save}" th:object="${topic}" method="post">
+	
+	<table>
+		<tr>
+			<td>Topic id</td>
+			<td><input type="text" th:field="*{id}"></td>
+			
+			<td>Topic name</td>
+			<td><input type="text" th:field="*{name}"></td>
+			
+			<td>Topic description</td>
+			<td><input type="text" th:field="*{description}"></td>
+			
+			<td><input type="submit" name="submit">
+			
+					
+		</tr>
+	
+	</table>	
+	
+	</form>
+	
+	
+	
+	</div>
+</body>
+</html>

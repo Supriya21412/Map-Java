@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Topic MAn</title>
+</head>
+<body>
+<form action=""></form>
+	<div>
+		<a href="/new">submit</a>
+		<a href="/pdf">PDF</a>	
+		<a href="/excel">Excel</a>
+		<a href="/csv">CSV</a>
+		<br></br>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Topic Id</th>
+					<th>Topic Name</th>
+					<th>Topic Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="topic : ${listTopic}">
+					<td th:text="${topic.id}">Topic Id</td>
+					<td th:text="${topic.name}">Topic name</td>
+					<td th:text="${topic.description}">Topic Description</td>
+						<td>
+							<a th:href="@{'/update/' + ${topic.id}}">Update</a>
+							
+						</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
